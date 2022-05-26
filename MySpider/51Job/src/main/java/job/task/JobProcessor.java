@@ -25,14 +25,14 @@ public class JobProcessor implements PageProcessor {
             .setCharset("GBK") // 设置编码
             .setTimeOut(10*1000) // 设置超时时间
             .setRetrySleepTime(3000) // 设置重试的间隔时间
-            .setRetryTimes(3); // 设置重试的次数
+            .setRetryTimes(3); //设置重试的次数
     @Override
     public Site getSite() {
         return site;
     }
 
-    // initialDelay当任务启动后, 等多久执行方法
-    // fixedDelay每隔多久执行方法
+    // initialDelay 当任务启动后, 等多久执行方法
+    // fixedDelay 每隔多久执行方法
     @Scheduled(initialDelay = 1000, fixedDelay = 1000 * 1000)
     public void process() {
         Spider.create(new JobProcessor())
