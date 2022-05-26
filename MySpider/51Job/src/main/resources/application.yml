@@ -1,0 +1,11 @@
+spring:
+# \u6570\u636E\u5E93\u914D\u7F6E
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dong?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: gmx
+# jpa\u914D\u7F6E
+jpa:
+  database: MySQL
+  show-sql: true
